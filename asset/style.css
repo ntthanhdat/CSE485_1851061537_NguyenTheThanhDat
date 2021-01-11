@@ -1,0 +1,22 @@
+.clearfix{
+    min-height: calc(100vh - 296px);
+}
+.openbtn{
+    color: #fff;
+
+}
+img.avatar{
+    border: 1px solid #000;
+}
+/* table */
+th, td { white-space: nowrap; 
+}
+th.ghost, td.ghost { 
+    background: #fff;
+    width: 74px;
+}
+th.ghost1, td.ghost1 { 
+    background: #fff;
+    width: 74px;
+}
+
