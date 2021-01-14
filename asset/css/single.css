@@ -1,0 +1,53 @@
+/* cho single */
+html, body {
+    height: 100%;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  .page-wrapper {
+    flex: 1 0 auto;
+  }
+/* cho main content  */
+
+.main-content.single{
+  background: white;
+  padding: 20px 50px;
+  font-size: 1.1em;
+  border-radius: 5px;
+}
+.main-content.single{
+  background: white;
+  padding: 20px 50px;
+  font-size: 1.1em;
+  border-radius: 5px;
+}
+.content .sidebar.single{
+  display: block;
+  padding: 0px 10px;
+}
+
+.main-content.single .post-title{
+  text-align: center;
+  margin-bottom: 40px;
+}
+.content .popular .post{
+  border-top: 1px solid #e0e0e0;
+margin-top: 10px;
+padding-top: 10px;
+}
+.content .popular .post img{
+height: 60px;
+width: 75px;
+float: left;
+margin-right: 10px;
+}
+
+.content .main-content .post .post-preview i{
+  color: #757575;
+  font-style: 0.8em;
+}
+.fb-page{
+  width: 100%;
+} 

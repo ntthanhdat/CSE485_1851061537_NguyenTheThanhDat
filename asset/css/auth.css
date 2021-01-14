@@ -1,0 +1,68 @@
+.auth-content{
+    width: 30%;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 5px;
+}
+.auth-content .form-title{
+    text-align: center;
+}
+.auth-content form div{
+    margin-bottom: 10px;
+}
+.auth-content form p{
+    text-align: center;
+
+}
+.auth-content form p a{
+    text-decoration: underline;
+    
+}
+.msg{
+    width: 100%;
+    margin: 5px auto;
+    padding: 8px;
+    border-radius: 5px;
+    list-style: none;
+}
+.success{
+    color: #247c24;
+    border: 1px solid #247c24;
+    background: rgb(138, 190, 142);
+}
+.error{
+    color: #7c2424;
+    border: 1px solid #7c2424;
+    background: rgb(190, 138, 138);
+}
+@media only screen and (max-width: 1300px){
+    
+    .auth-content{
+        width: 40%;
+    }
+}
+@media only screen and (max-width: 950px){
+    
+    .auth-content{
+        width: 50%;
+    }
+}
+@media only screen and (max-width: 950px){
+    
+    .auth-content{
+        width: 50%;
+    }
+}
+@media only screen and (max-width: 750px){
+    
+    .auth-content{
+        width: 60%;
+    }
+}
+@media only screen and (max-width: 480px){
+    
+    .auth-content{
+        width: 90%;
+    }
+}
