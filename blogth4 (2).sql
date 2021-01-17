@@ -103,7 +103,7 @@ CREATE TABLE `profile` (
   `work1` varchar(50) NOT NULL,
   `work2` varchar(50) NOT NULL,
   `facebook` varchar(100) NOT NULL,
-  `about_me` varchar(255) NOT NULL,
+  `about` varchar(255) NOT NULL,
   `picture` blob NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -111,7 +111,7 @@ CREATE TABLE `profile` (
 -- Đang đổ dữ liệu cho bảng `profile`
 --
 
-INSERT INTO `profile` (`memberid`, `name`, `country`, `phone`, `email`, `address`, `age`, `work1`, `work2`, `facebook`, `about_me`, `picture`) VALUES
+INSERT INTO `profile` (`memberid`, `name`, `country`, `phone`, `email`, `address`, `age`, `work1`, `work2`, `facebook`, `about`, `picture`) VALUES
 (1, 'Nguyễn Thế Thành Đạt', 'Vietnam', '0774266332', 'thanhdatnguyenthe2k@gmail.com', '175 Tayson st, Hanoi, Vietnam', 20, 'Fullstack developer', 'Designer', 'facebook.com/juunirippou', 'Hi! I m Dat.', '');
 
 -- --------------------------------------------------------

@@ -18,10 +18,10 @@ if ( !isset( $_SESSION[ 'userid' ] ) ){
 }
 ?>
 
-<div class="container pt-3 clearfix">
+<div class="container pt-3 clearfix" style="text-align:center">
 
     <h1>Welcome to my team!</h1>
-	
+	<a class="btn  btn-outline-success"  href="direct.php">Click here!</a>
 </div>
 <?php
 include('footer.php')?>

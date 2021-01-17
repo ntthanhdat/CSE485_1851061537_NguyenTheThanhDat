@@ -22,12 +22,12 @@ if (!isset($_GET['memberid'])) {
     <head>
       <meta charset="UTF-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <title>BreezyCV - Resume / CV / vCard Template</title>
+      <title>My CV</title>
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
       <meta name="description" content="BreezyCV - Resume / CV / vCard Template" />
       <meta name="keywords" content="vcard, resposnive, retina, resume, jquery, css3, bootstrap, Material CV, portfolio" />
       <meta name="author" content="lmpixels" />
-      <link rel="shortcut icon" href="favicon.ico">
+      
 
 
       <link rel="stylesheet" href="css/reset.css" type="text/css">
@@ -61,7 +61,15 @@ if (!isset($_GET['memberid'])) {
           <header id="site_header" class="header mobile-menu-hide">
             <div class="header-content">
               <div class="header-photo">
-                <img src="img/main_photo.jpg" alt="Alex Smith">
+                <?php
+                if(!empty($pro5['picture'])){
+                  echo '<img src = "data:image/png;base64,' . base64_encode($pro5['picture']) . '" alt="'.$pro5['name'].'" />';
+              
+                }else
+                echo '<img src="img/main_photo.jpg" alt="'.$pro5['name'].'">';
+                
+            ?>
+                
               </div>
               <div class="header-titles">
                 <h2><?php echo $pro5['name']; ?></h2>
@@ -169,7 +177,7 @@ if (!isset($_GET['memberid'])) {
                   <!-- Personal Information -->
                   <div class="row">
                     <div class="col-xs-12 col-sm-7">
-                      <?php echo $pro5['about_me']; ?>
+                      <?php echo $pro5['about']; ?>
                     </div>
 
                     <div class="col-xs-12 col-sm-5">
@@ -457,9 +465,6 @@ if (!isset($_GET['memberid'])) {
                 </div>
               </section>
               <!-- End of Resume Subpage -->
-
-           
-      
               <!-- Contact Subpage -->
               <section data-id="contact" class="animated-section">
                 <div class="page-title">

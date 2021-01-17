@@ -31,6 +31,7 @@ if (empty(trim($errors))) {
             $_SESSION['userid'] = $user['userid'];
             $_SESSION['user_name'] = $user['email'];
             $_SESSION['role'] = $user['user_level'];
+            $_SESSION['memberid'] = $user['memberid'];
             $_SESSION['name'] = $user['first_name'] . ' ' . $user['last_name'];
             header('Location: ../index.php');
         }

@@ -17,6 +17,10 @@ $result=mysqli_query($conn,$sql);
                   <label for="">User id</label>
                   <input type="text" name="id" id="" class="form-control" value="<?php echo $post['userid'] ?>">
                 </div>
+                <div class="form-group" >
+                  <label for="">Member id</label>
+                  <input type="text" name="memberid" id="" class="form-control" value="<?php echo $post['memberid'] ?>">
+                </div>
                 <div class="form-group">
                   <label for="">First Name</label>
                   <input type="text" name="fname" id="" class="form-control" value="<?php echo $post['first_name'] ?>">

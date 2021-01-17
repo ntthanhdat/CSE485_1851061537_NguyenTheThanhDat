@@ -20,8 +20,6 @@ th.ghost1, td.ghost1 {
     width: 74px;
 }
 
-element.style {
-}
 .left {
     left: 0;
     background-color: #775ba4;
@@ -47,9 +45,6 @@ element.style {
     transform: translate(-50%, -40%);
     text-align: center;
 }
-*, *:before, *:after {
-    box-sizing: inherit;
-}
 .myLink {
     text-decoration: none;
     color: white !important;
@@ -72,4 +67,8 @@ element.style {
 .myh1 {
     line-height: 90px;
     font-size: 40px;
+}
+.skill-group{
+    border: 1px solid #000;
+    margin: 10px;
 }
