@@ -20,3 +20,56 @@ th.ghost1, td.ghost1 {
     width: 74px;
 }
 
+element.style {
+}
+.left {
+    left: 0;
+    background-color: #775ba4;
+}
+.right {
+    right: 0;
+    background-color: #6138ad;
+}
+.split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow: hidden;
+    padding-top: 20px;
+    color: white;
+}
+.centered {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    text-align: center;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+.myLink {
+    text-decoration: none;
+    color: white !important;
+    opacity: 0.8;
+}
+.myP {
+    font-size: 15px;
+    max-width: 370px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: auto;
+}
+.mySpan {
+    border-radius: 15%;
+    border: 2px solid white;
+    padding: 20px 35px;
+    display: inline-block;
+    font-size: 105px;
+}
+.myh1 {
+    line-height: 90px;
+    font-size: 40px;
+}

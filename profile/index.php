@@ -1,7 +1,23 @@
+<?php 
+if(!isset($_GET['memberid'])){
+
+echo'<h1>Your required profile not exist</h1>';
+}else{
+  
+  include('../admin/config.php');
+  $sql = "SELECT * FROM profile where memberid= $_GET[memberid]";
+  $result = mysqli_query($conn, $sql);
+  if(mysqli_num_rows($result) > 0){
+      $pro5 = mysqli_fetch_assoc($result);
+      
+  
+  
+
+?>
 <!DOCTYPE html>
 <html lang="en" class="no-js">
   
-<!-- Mirrored from lmpixels.com/demo/breezycv/light/1/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 08 Jan 2021 10:17:26 GMT -->
+<!-- Mirrored from lmpixels.com/demo/breezycv/light/1/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 08 Jan 2021 10:16:48 GMT -->
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
@@ -47,8 +63,8 @@
                 <img src="img/main_photo.jpg" alt="Alex Smith">
               </div>
               <div class="header-titles">
-                <h2>Alex Smith</h2>
-                <h4>Web Designer</h4>
+                <h2><?php echo $pro5['name']; ?></h2>
+                <h4><?php echo $pro5['work1']; ?></h4>
               </div>
             </div>
 
@@ -91,16 +107,10 @@
               </li>
             </ul>
 
-            <div class="social-links">
-              <ul>
-                <li><a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-                <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
-              </ul>
-            </div>
+            
 
             <div class="header-buttons">
-              <a href="#" target="_blank" class="btn btn-primary">Download CV</a>
+              <a href="#" target="_blank" class="btn btn-primary"><i class="fab fa-facebook-f"></i> Facebook</a>
             </div>
 
             <div class="copyrights">© 2020 All rights reserved.</div>
@@ -130,14 +140,14 @@
                     <div class="row">
                       <div class="col-sm-12 col-md-12 col-lg-12">
                         <div class="title-block">
-                          <h2>Alex Smith</h2>
+                          <h2><?php echo $pro5['name']; ?></h2>
                           <div class="owl-carousel text-rotation">                                    
                             <div class="item">
-                              <div class="sp-subtitle">Web Designer</div>
+                              <div class="sp-subtitle"><?php echo $pro5['work1']; ?></div>
                             </div>
                             
                             <div class="item">
-                              <div class="sp-subtitle">Frontend-developer</div>
+                              <div class="sp-subtitle"><?php echo $pro5['work2']; ?></div>
                             </div>
                           </div>
                         </div>
@@ -158,35 +168,35 @@
                   <!-- Personal Information -->
                   <div class="row">
                     <div class="col-xs-12 col-sm-7">
-                      <p>Proin volutpat mauris ac pellentesque pharetra. Suspendisse congue elit vel odio suscipit, sit amet tempor nisl imperdiet. Quisque ex justo, faucibus ut mi in, condimentum finibus dolor. Aliquam vitae hendrerit dolor, eget imperdiet mauris. Maecenas et ante id ipsum condimentum dictum et vel massa. Ut in imperdiet dolor, vel consectetur dui.</p>
-                    </div>
+                    <?php echo $pro5['about_me']; ?>    
+                  </div>
 
                     <div class="col-xs-12 col-sm-5">
                       <div class="info-list">
                         <ul>
                           <li>
                             <span class="title">Age</span>
-                            <span class="value">32</span>
+                            <span class="value"><?php echo $pro5['age']; ?></span>
                           </li>
 
                           <li>
                             <span class="title">Residence</span>
-                            <span class="value">USA</span>
+                            <span class="value"><?php echo $pro5['country']; ?></span>
                           </li>
 
                           <li>
                             <span class="title">Address</span>
-                            <span class="value">88 Some Street, Some Town</span>
+                            <span class="value"><?php echo $pro5['address']; ?></span>
                           </li>
 
                           <li>
                             <span class="title">e-mail</span>
-                            <span class="value"><a href="https://lmpixels.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="452028242c2905203d24283529206b262a28">[email&#160;protected]</a></span>
+                            <span class="value"><?php echo $pro5['email']; ?></span>
                           </li>
 
                           <li>
                             <span class="title">Phone</span>
-                            <span class="value">+0123 123 456 789</span>
+                            <span class="value"><?php echo $pro5['phone']; ?></span>
                           </li>
                         </ul>
                       </div>
@@ -204,7 +214,15 @@
                       </div>
                     </div>
                   </div>
-
+                  <?php 
+                  $sql = "SELECT * FROM profile-detail-work where memberid= $_GET[memberid]";
+                  $result = mysqli_query($conn, $sql);
+                  if (mysqli_num_rows($result) > 0) {
+                      $row = mysqli_fetch_all($result);
+                  }
+                  
+              foreach ($row as $work) {
+                  ?>
                   <div class="row">
                     <div class="col-xs-12 col-sm-6">
                       <div class="col-inner">
@@ -214,7 +232,7 @@
                               <i class="lnr lnr-store"></i>
                             </div>
                             <div class="ci-text">
-                              <h4>Ecommerce</h4>
+                              <h4><?php ?></h4>
                               <p>Pellentesque pellentesque, ipsum sit amet auctor accumsan, odio tortor bibendum massa, sit amet ultricies ex lectus scelerisque nibh. Ut non sodales.</p>
                             </div>
                           </div>
@@ -1021,24 +1039,25 @@
 
                   <div class="row">
                     <!-- Contact Info -->
-                    <div class="col-xs-12 col-sm-4">
+                    <div class="col-xs-12 col-sm-2"></div>
+                    <div class="col-xs-12 col-sm-8">
                       <div class="lm-info-block gray-default">
                         <i class="lnr lnr-map-marker"></i>
-                        <h4>San Francisco</h4>
+                        <h4><?php echo $pro5['address']; ?></h4>
                         <span class="lm-info-block-value"></span>
                         <span class="lm-info-block-text"></span>
                       </div>
 
                       <div class="lm-info-block gray-default">
                         <i class="lnr lnr-phone-handset"></i>
-                        <h4>415-832-2000</h4>
+                        <h4><?php echo $pro5['phone']; ?>0</h4>
                         <span class="lm-info-block-value"></span>
                         <span class="lm-info-block-text"></span>
                       </div>
 
                       <div class="lm-info-block gray-default">
                         <i class="lnr lnr-envelope"></i>
-                        <h4><a href="https://lmpixels.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="abcac7ced3ebced3cac6dbc7ce85c8c4c6">[email&#160;protected]</a></h4>
+                        <h4><?php echo $pro5['email']; ?></h4>
                         <span class="lm-info-block-value"></span>
                         <span class="lm-info-block-text"></span>
                       </div>
@@ -1054,59 +1073,9 @@
                     </div>
                     <!-- End of Contact Info -->
 
-                    <!-- Contact Form -->
-                    <div class="col-xs-12 col-sm-8">
-                      <div id="map" class="map"></div>
-                      <div class="block-title">
-                        <h3>How Can I <span>Help You?</span></h3>
-                      </div>
+                    
 
-                      <form id="contact_form" class="contact-form" action="https://lmpixels.com/demo/breezycv/light/1/contact_form/contact_form.php" method="post">
-
-                        <div class="messages"></div>
-
-                        <div class="controls two-columns">
-                          <div class="fields clearfix">
-                            <div class="left-column">
-                              <div class="form-group form-group-with-icon">
-                                <input id="form_name" type="text" name="name" class="form-control" placeholder="" required="required" data-error="Name is required.">
-                                <label>Full Name</label>
-                                <div class="form-control-border"></div>
-                                <div class="help-block with-errors"></div>
-                              </div>
-
-                              <div class="form-group form-group-with-icon">
-                                <input id="form_email" type="email" name="email" class="form-control" placeholder="" required="required" data-error="Valid email is required.">
-                                <label>Email Address</label>
-                                <div class="form-control-border"></div>
-                                <div class="help-block with-errors"></div>
-                              </div>
-
-                              <div class="form-group form-group-with-icon">
-                                <input id="form_subject" type="text" name="subject" class="form-control" placeholder="" required="required" data-error="Subject is required.">
-                                <label>Subject</label>
-                                <div class="form-control-border"></div>
-                                <div class="help-block with-errors"></div>
-                              </div>
-                            </div>
-                            <div class="right-column">
-                              <div class="form-group form-group-with-icon">
-                                <textarea id="form_message" name="message" class="form-control" placeholder="" rows="7" required="required" data-error="Please, leave me a message."></textarea>
-                                <label>Message</label>
-                                <div class="form-control-border"></div>
-                                <div class="help-block with-errors"></div>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="g-recaptcha" data-sitekey="6LdqmCAUAAAAAMMNEZvn6g4W5e0or2sZmAVpxVqI"></div>
-      
-                          <input type="submit" class="button btn-send" value="Send message">
-                        </div>
-                      </form>
-                    </div>
-                    <!-- End of Contact Form -->
-                  </div>
+                </div>
 
                 </div>
               </section>
@@ -1136,5 +1105,17 @@
     <script src="js/main.js"></script>
   </body>
 
-<!-- Mirrored from lmpixels.com/demo/breezycv/light/1/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 08 Jan 2021 10:17:26 GMT -->
+<!-- Mirrored from lmpixels.com/demo/breezycv/light/1/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 08 Jan 2021 10:17:01 GMT -->
 </html>
+
+<?php
+  mysqli_close($conn);
+  }
+  else{
+    echo'<h1>Your required profile not exist</h1>';
+  }
+    
+  
+
+}
+?>
