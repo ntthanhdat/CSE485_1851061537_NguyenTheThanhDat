@@ -120,7 +120,7 @@ if (!isset($_GET['memberid'])) {
 
 
             <div class="header-buttons">
-              <a href="#" target="_blank" class="btn btn-primary"><i class="fab fa-facebook-f"></i> Facebook</a>
+              <a target="blank" href="http://<?php echo $pro5['facebook']; ?>" target="_blank" class="btn btn-primary"><i class="fab fa-facebook-f"></i> Facebook</a>
             </div>
 
             <div class="copyrights">© 2020 All rights reserved.</div>
