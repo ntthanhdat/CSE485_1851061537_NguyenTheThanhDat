@@ -47,36 +47,15 @@ $result=mysqli_query($conn,$sql);
                     </select>
                 </div>
                 <div class="form-group">
-                        <label for="">Class</label><br>
-                        <input type="text" class="form-control" name="class" id=""
-                            value="<?php echo $post['class'] ?>">
-                    </div>
-                <div class="form-group">
-                        <label for="">Address 1</label><br>
+                        <label for="">Address </label><br>
                         <input type="text" class="form-control" name="address1" id=""
                             value="<?php echo $post['address1'] ?>">
-                    </div>
-                    <div class="form-group">
-                        <label for="">Address 2</label><br>
-                        <input type="text" class="form-control" name="address2" id=""
-                            value="<?php echo $post['address2'] ?>">
                     </div>
                     <div class="form-group">
                         <label for="">City</label><br>
                         <input type="text" class="form-control" name="city" id=""
                             value="<?php echo $post['city'] ?>">
                     </div>
-                    <div class="form-group">
-                        <label for="">State country</label><br>
-                        <input type="text" class="form-control" name="state_country" id=""
-                            value="<?php echo $post['state_country'] ?>">
-                    </div>
-                    <div class="form-group">
-                        <label for="">Zip code/ post code</label><br>
-                        <input type="text" class="form-control" name="zcode_pcode" id=""
-                            value="<?php echo $post['zcode_pcode'] ?>">
-                
-            
             <div class="d-flex justify-content-center py-3">
                 <a href="index.php" class="btn btn-secondary mx-3" >Close</a>
                   <button type="submit" class="btn btn-success mx-3">Save</button>

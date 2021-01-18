@@ -42,7 +42,7 @@ if (!isset($_GET['memberid'])) {
     </head>
 
     <body>
-    <?php include('header.php');?>
+    
       <!-- Animated Background -->
       <div class="lm-animated-bg" style="background-image: url(img/main_bg.png);"></div>
       <!-- /Animated Background -->
@@ -554,3 +554,5 @@ if (!isset($_GET['memberid'])) {
   }
 }
 ?>
+<p>Ifyou are member, please create your cv.</p>
+<a name="" id="" class="btn btn-success" href="add.php" role="button">click here</a>

@@ -21,18 +21,18 @@ if (!isset($_SESSION['memberid'])) {
                 $result = mysqli_query($conn, $sql);
                 if (mysqli_num_rows($result) > 0) {
                     $row = mysqli_fetch_all($result);
-                
+                }
 
                 foreach ($row as $skill) { ?>
                     <div class="skill-group">
-                        <form action="edit-process.php" method="post">
+                        <form action="add-process.php" method="post">
                             <div class="form-group" hidden>
                                 <label for="">User id</label>
                                 <input type="text" name="skillid" id="" class="form-control" value="<?php echo $skill[1] ?>">
                             </div>
                             <div class="form-group">
                                 <label for=""><b>Skill Group Name</b></label>
-                                <input type="text" name="skillname" id="" class="form-control" value="<?php echo $skill[2] ?>">
+                                <input type="text" name="skillname" id="" class="form-control" ">
                             </div>
                             <button type="submit" class="btn btn-success mx-3">Save</button>
                         </form>
@@ -56,7 +56,7 @@ if (!isset($_SESSION['memberid'])) {
                                 }
 
                                 foreach ($subrow as $sub_skill) {
-                                    echo '<form action="edit-process.php" class="form-inline" method="post"> <tr>'; ?>
+                                    echo '<form action="add-process.php" class="form-inline" method="post"> <tr>'; ?>
                                     <div class="form-group" hidden>
                                         <label for="">subskill id</label>
                                         <input type="text" name="sub-skillid" id="" class="form-control" value="<?php echo $sub_skill[1] ?>">
@@ -68,14 +68,14 @@ if (!isset($_SESSION['memberid'])) {
                                     <td>
 
                                         <div class="form-group">
-                                            <input type="text" name="sub-skillname" id="" class="form-control" value="<?php echo $sub_skill[2] ?>">
+                                            <input type="text" name="sub-skillname" id="" class="form-control" >
                                         </div>
 
 
                                     </td>
                                     <td>
                                         <div class="form-group">
-                                            <input type="number" name="point" id="" class="form-control" value="<?php echo $sub_skill[3] ?>">
+                                            <input type="number" name="point" id="" class="form-control" >
                                         </div>
                                     </td>
                                     <td><button type="submit" class="btn btn-success mx-3">Save</button>
@@ -91,9 +91,7 @@ if (!isset($_SESSION['memberid'])) {
                         </table>
                     </div>
 
-                    <?php }}else{ echo '<h3>Your work is empty!</h3>';} ?>
-                <a href="add-resume-skill.php"  class="btn btn-success mx-3 mt-5">Add</a>
-                
+                <?php } ?>
 
                 <div class="pt-3 skill-group">
                     <h4>Knowlege</h4>
@@ -103,32 +101,30 @@ if (!isset($_SESSION['memberid'])) {
                     $result = mysqli_query($conn, $sql);
                     if (mysqli_num_rows($result) > 0) {
                         $row = mysqli_fetch_all($result);
-                    
+                    }
 
                     foreach ($row as $skill) { ?>
 
-                        <form action="edit-process.php" method="post">
+                        <form action="add-process.php" method="post">
                             <div class="form-group" hidden>
                                 <label for="">know id</label>
                                 <input type="text" name="knowlegeid" id="" class="form-control" value="<?php echo $skill[1] ?>">
                             </div>
                             <div class="form-group">
                                 <label for=""><b>Knowlege Name</b></label>
-                                <input type="text" name="name" id="" class="form-control" value="<?php echo $skill[2] ?>">
+                                <input type="text" name="name" id="" class="form-control" ">
                             </div>
                             <button type="submit" class="btn btn-success mx-3">Save</button>
                         </form>
 
 
-                        <?php }}else{ echo '<h3>Your work is empty!</h3>';} ?>
-                <a href="add-resume-skill.php"  class="btn btn-success mx-3 mt-5">Add</a>
-                
+                    <?php } ?>
                 </div>
 
 
                 <div class="d-flex justify-content-left py-3">
-                    <a href="edit-resume-edu.php" class="btn btn-primary mx-3">Previous</a>
-                    <a href="edit.php" class="btn btn-primary mx-3">Next</a>
+                    <a href="add-resume-edu.php" class="btn btn-primary mx-3">Previous</a>
+                    <a href="add.php" class="btn btn-primary mx-3">Next</a>
                 </div>
 
             </div>

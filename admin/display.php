@@ -26,17 +26,13 @@ if (mysqli_num_rows($result) > 0) {
             <h6> User ID: <?php echo $post['userid'] ?> </h6>
             <h6>Email: <?php echo $post['email'] ?></h6>
             <h6>Phone: <?php echo $post['phone'] ?></h6>
-            <h6>Address1: <?php echo $post['address1'] ?></h6>
-            <h6>Address2: <?php echo $post['address2'] ?></h6>
+            <h6>Address: <?php echo $post['address1'] ?></h6>
             <h6>City: <?php echo $post['city'] ?></h6>
-            <h6>State country: <?php echo $post['state_country'] ?></h6>
-            <h6>Zipcode/Postcode: <?php echo $post['zcode_pcode'] ?></h6>
             <h6> Registration date: <?php echo $post['registration_date'] ?> </h6>
             <h6> User level: <?php echo $post['user_level'] ?> </h6>
-            <h6> Class: <?php echo $post['class'] ?> </h6>
-            <h6> Paid: <?php echo $post['paid'] ?> </h6>
             <h6> Status: <?php echo $post['status'] ?> </h6>
             <h6> Active code: <?php echo $post['activation_code'] ?> </h6>
+            <h6> Member ID: <?php echo $post['memberid'] ?> </h6>
         </div>
 
         <div class="col-sm-2">

@@ -28,10 +28,6 @@ include('config.php');
                   <input type="text" name="address1" id="" class="form-control" placeholder="" aria-describedby="helpId">
                 </div>
                 <div class="form-group">
-                  <label for="">Adress 2</label><br>
-                  <input type="text" name="address2" id="" class="form-control" placeholder="" aria-describedby="helpId">
-                </div>
-                <div class="form-group">
                   <label for="">Phone</label><br>
                   <input type="text" name="phone" id="" class="form-control" placeholder="" aria-describedby="helpId">
                 </div>
@@ -43,6 +39,10 @@ include('config.php');
                       <option value="0">0</option>  
                       <option value="1">1</option>
                     </select>
+                </div>
+                <div class="form-group">
+                  <label for="">Member ID</label><br>
+                  <input type="text" name="memberid" id="" class="form-control" placeholder="" aria-describedby="helpId">
                 </div>
                 <div class="d-flex justify-content-center">
                 <a href="index.php" class="btn btn-secondary mx-3" >Close</a>

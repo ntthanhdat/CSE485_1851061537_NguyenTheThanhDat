@@ -10,14 +10,9 @@
                     <th>Email</th>
                     <th>Registration date</th>
                     <th>User level</th>
-                    <th>Class</th>
                     <th>Adress 1</th>
-                    <th>Adress 2</th>
                     <th>City</th>
-                    <th>State country</th>
-                    <th>Pcode</th>
                     <th>Phone</th>
-                    <th>Paid</th>
                     <th>Status</th>
                     <th>Active code</th>
                     <th>Memberid</th>
@@ -41,12 +36,7 @@
                     echo '<td >' . $post[9] . '</td>';
                     echo '<td >' . $post[10] . '</td>';
                     echo '<td >' . $post[11] . '</td>';
-                    echo '<td >' . $post[12] . '</td>';
                     echo '<td >' . $post[13] . '</td>';
-                    echo '<td >' . $post[14] . '</td>';
-                    echo '<td >' . $post[15] . '</td>';
-                    echo '<td >' . $post[16] . '</td>';
-                    echo '<td >' . $post[17] . '</td>';
                     echo '<td scope="row" class="ghost  ghost1"> <a href="display.php?id=' . $post[0] . '"> <i class="fas fa-file-alt"></i></td>';
                     echo '<td scope="row" class="ghost  ghost1"> <a href="edit.php?id=' . $post[0] . '"> <i class="far fa-edit"></i></td>';
                     echo '<td scope="row" class="ghost  ghost1"> <a href="delete.php?id=' . $post[0] . '"> <i class="fas fa-trash-alt"></i></td>';
