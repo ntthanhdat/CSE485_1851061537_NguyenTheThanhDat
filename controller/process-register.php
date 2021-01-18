@@ -65,7 +65,7 @@ $errors = array(); // Initialize an error array. #2
         $mail->Subject = 'Activate the account.';  
         $mail->Body  = '<h1>Welcome to NukeHanda.net</h1><h3>Dear '.$first_name.' '.$last_name.'</h3>';
         $mail->Body  .= '<p>Thank you for signing up to NukeHanda.net. <br>We just need you to confirm your email address and finish setting up a new  account we created just for you. <br>You can do it super-quickly by clicking follow link:</p>';
-        $mail->Body  .= '<b style="color: blue; text-decoration:none;"> click here http://localhost/prac-login-regis/controller/process-activate.php?userid='.$id['userid'].'&code='.$randstring.' </b>';  
+        $mail->Body  .= '<b style="color: blue; text-decoration:none;"> click here http://localhost/BTL/controller/process-activate.php?userid='.$id['userid'].'&code='.$randstring.' </b>';  
         $mail->Body  .= '<h6> Or copy avtive code</h6>'.$randstring;
         if($mail->send()) {  
         echo 'Message has been sent';  

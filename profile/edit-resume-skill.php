@@ -54,7 +54,7 @@ if (!isset($_SESSION['memberid'])) {
                                 $result = mysqli_query($conn, $sql);
                                 if (mysqli_num_rows($result) > 0) {
                                     $subrow = mysqli_fetch_all($result);
-                                }
+                                
 
                                 foreach ($subrow as $sub_skill) {
                                     echo '<form action="edit-process.php" class="form-inline" method="post"> <tr>'; ?>
@@ -86,7 +86,7 @@ if (!isset($_SESSION['memberid'])) {
                                 <?php
                                     echo '<td scope="row" > <a class="btn btn-danger mx-3" href="delete.php?subskillid=' . $sub_skill[1] . '"> <i class="fas fa-trash-alt"></i> Delete</a></td>';
                                     echo '</form> </tr>';
-                                }
+                                }}
                                 ?>
                             </tbody>
                         </table>
