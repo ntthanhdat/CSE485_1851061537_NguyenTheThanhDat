@@ -38,6 +38,10 @@ $result=mysqli_query($conn,$sql);
                   <label for="">Email</label><br>
                   <input type="email" class="form-control" name="email" id="" value="<?php echo $post['email'] ?>">
                 </div>
+                <div class="form-group">
+                  <label for="">Status</label><br>
+                  <input type="status" class="form-control" name="status" id="" value="<?php echo $post['status'] ?>">
+                </div>
                 <!-- level -->
                 <div class="form-group">
                     <label for=""> User Level</label>
