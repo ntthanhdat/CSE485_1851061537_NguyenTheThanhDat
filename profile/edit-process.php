@@ -48,7 +48,7 @@ else if(isset($_POST['sub-skillid'])&&isset($_POST['sub-skillname'])){ //update 
     $skillid=$_POST['skillid'];
     $name=$_POST['sub-skillname'];
     $point=$_POST['point'];
-    $sql="update `skill-detail` set skillname='$name', point ='$point' where skillid=$id ";
+    $sql="update `skill-detail` set skillname='$name', point ='$point' where `subskillid`=$id ";
     echo $sql;
     mysqli_set_charset($conn,'UTF8');
      if(mysqli_query($conn,$sql)){
