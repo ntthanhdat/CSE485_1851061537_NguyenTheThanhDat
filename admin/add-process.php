@@ -18,8 +18,10 @@ if (mysqli_num_rows($result) > 0) {
     header("Location:error.php?error=$e");
 } else {
     $hash= password_hash($password, PASSWORD_DEFAULT); #hash work ok
-    $sql = "insert into users(first_name, last_name, email, password, address1, phone, user_level, memberid, status)
-VALUES ('$fname','$lname','$email', '$hash' ,'$address1',  '$phone','$user_level','$memberid',1)";
+    $sql = "insert into users
+    (first_name, last_name, email, password, address1, phone, user_level, memberid, status, registration_date)
+VALUES ('$fname','$lname','$email', '$hash' ,'$address1',  '$phone','$user_level','$memberid',1,CURRENT_DATE)";
+
     mysqli_set_charset($conn, 'UTF8');
     if (mysqli_query($conn, $sql)) {
         header("Location:index.php");

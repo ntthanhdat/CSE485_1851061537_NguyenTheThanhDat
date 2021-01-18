@@ -83,7 +83,7 @@ if (!isset($_SESSION['memberid'])) {
                                     </td>
 
                                 <?php
-                                    echo '<td scope="row" > <a class="btn btn-danger mx-3" href="delete.php?id=' . $sub_skill[1] . '"> <i class="fas fa-trash-alt"></i> Delete</td>';
+                                    echo '<td scope="row" > <a class="btn btn-danger mx-3" href="delete.php?subskillid=' . $sub_skill[1] . '"> <i class="fas fa-trash-alt"></i> Delete</td>';
                                     echo '</form> </tr>';
                                 }
                                 ?>
