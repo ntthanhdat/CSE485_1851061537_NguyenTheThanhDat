@@ -35,6 +35,7 @@ if (!isset($_SESSION['memberid'])) {
                                 <input type="text" name="skillname" id="" class="form-control" value="<?php echo $skill[2] ?>">
                             </div>
                             <button type="submit" class="btn btn-success mx-3">Save</button>
+                            <a class="btn btn-danger mx-3" href="delete.php?skillid=<?php echo $skill[1] ;?>"> <i class="fas fa-trash-alt"></i>Delete</a>
                         </form>
 
                         <table class="table table-striped table-inverse " id="tableno1">
@@ -83,7 +84,7 @@ if (!isset($_SESSION['memberid'])) {
                                     </td>
 
                                 <?php
-                                    echo '<td scope="row" > <a class="btn btn-danger mx-3" href="delete.php?subskillid=' . $sub_skill[1] . '"> <i class="fas fa-trash-alt"></i> Delete</td>';
+                                    echo '<td scope="row" > <a class="btn btn-danger mx-3" href="delete.php?subskillid=' . $sub_skill[1] . '"> <i class="fas fa-trash-alt"></i> Delete</a></td>';
                                     echo '</form> </tr>';
                                 }
                                 ?>

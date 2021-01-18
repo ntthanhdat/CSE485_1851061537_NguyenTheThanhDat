@@ -48,6 +48,7 @@ if (!isset($_SESSION['memberid'])) {
                                     <input type="text" name="about" id="" class="form-control" value="<?php echo $skill[6] ?>" >
                                 </div>
                                 <button type="submit" class="btn btn-success mx-3">Save</button>
+                                <a class="btn btn-danger mx-3" href="delete.php?eduid=<?php echo $skill[1] ;?>"> <i class="fas fa-trash-alt"></i>Delete</a>
                             </form>
 
                          
@@ -88,6 +89,7 @@ if (!isset($_SESSION['memberid'])) {
                                     <input type="text" name="about" id="" class="form-control" value="<?php echo $skill[5] ?>" >
                                 </div>
                                 <button type="submit" class="btn btn-success mx-3">Save</button>
+                                <a class="btn btn-danger mx-3" href="delete.php?expid=<?php echo $skill[1] ;?>"> <i class="fas fa-trash-alt"></i>Delete</a>
                             </form>
 
                          
@@ -125,6 +127,7 @@ if (!isset($_SESSION['memberid'])) {
                                     <input type="text" name="picture" id="" class="form-control" value="<?php echo $skill[4] ?>" >
                                 </div>
                                 <button type="submit" class="btn btn-success mx-3">Save</button>
+                                <a class="btn btn-danger mx-3" href="delete.php?cerid=<?php echo $skill[1] ;?>"> <i class="fas fa-trash-alt"></i>Delete</a>
                             </form>
 
                          
