@@ -85,8 +85,7 @@ if (!isset($_SESSION['memberid'])) {
 
                 <div class="d-flex justify-content-left py-3">
                     <a href="add-resume-edu.php" class="btn btn-primary mx-3">Previous</a>
-                    <a href="add.php" class="btn btn-primary mx-3">Next</a>
-                </div>
+                   </div>
 
             </div>
         </div>

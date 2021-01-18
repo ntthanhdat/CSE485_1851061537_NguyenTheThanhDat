@@ -87,8 +87,7 @@ if (!isset($_SESSION['memberid'])) {
                 </div>
             </form>
                         <div class="d-flex justify-content-left py-3">
-                            <a href="#" class="btn btn-primary mx-3">Previous</a>
-                            <a href="edit-work.php" class="btn btn-primary mx-3">Next</a>
+                             <a href="edit-work.php" class="btn btn-primary mx-3">Next</a>
                         </div>
                         
                     </div>
