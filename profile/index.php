@@ -374,14 +374,14 @@ if (!isset($_GET['memberid'])) {
                               <h4><?php echo $sub_skill[2];  ?></h4>
                               <div class="skill-value"><?php echo $sub_skill[3] . '%' ?></div>
                             </div>
-                            <?php $val = $sub_skill[2];
-                            if ($val < 65) $pro= '1';
-                            if ($val > 65 && $val <= 75) $pro= '8';
-                            if ($val > 75 && $val <= 85) $pro= '6';
-                            if ($val > 85 && $val <=  90) $pro= '9';
-                            if ($val >= 95 && $val <=  100) $pro= '5';
-                            if($val==100) $pro='7' ?>
-                            <div class="skill-container skill-<?php echo $pro?>">
+                            
+                            <div class="skill-container skill-<?php $val = $sub_skill[3];
+                            if ($val < 65) {echo 1;}else
+                            if ($val > 65 && $val <= 75) {echo 8;}else
+                            if ($val > 75 && $val <= 85) {echo 6;}else
+                            if ($val > 85 && $val <=  90) {echo 9;}else
+                            if ($val >= 95 && $val <=  100) {echo 5;}else
+                            if($val==100) {echo 7;}?>">
                               <div class="skill-percentage"></div>
                             </div>
                             <!-- End of Skill 1 -->
