@@ -96,8 +96,10 @@ if (!isset($_SESSION['memberid'])) {
                 
 
                 <div class="pt-3 skill-group">
+                
                     <h4>Knowlege</h4>
                     <hr>
+                    <div class="row">
                     <?php
                     $sql = 'SELECT * FROM `knowlege` WHERE memberid=' . $_SESSION['memberid'] . ' ';
                     $result = mysqli_query($conn, $sql);
@@ -106,6 +108,9 @@ if (!isset($_SESSION['memberid'])) {
                     
 
                     foreach ($row as $skill) { ?>
+                    <div class="col-sm-3">
+                        
+                    
 
                         <form action="edit-process.php" method="post">
                             <div class="form-group" hidden>
@@ -118,12 +123,16 @@ if (!isset($_SESSION['memberid'])) {
                             </div>
                             <button type="submit" class="btn btn-success mx-3">Save</button>
                         </form>
+                        </div>
 
-
-                        <?php }}else{ echo '<h3>Your work is empty!</h3>';} ?>
+                        <?php }
+                        echo '</div>'; 
+                    } 
+                    else{ echo '<h3>Your work is empty!</h3>';} ?>
+                    </div>
                 <a href="add-resume-skill.php"  class="btn btn-success mx-3 mt-5">Add</a>
                 
-                </div>
+                
 
 
                 <div class="d-flex justify-content-left py-3">

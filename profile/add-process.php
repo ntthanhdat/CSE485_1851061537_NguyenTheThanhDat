@@ -110,12 +110,11 @@ if (isset($_POST['cenid'])) {  //update certificate
         $e = mysqli_error($conn);
         echo $e;
     }
-} else if (isset($_POST['sub-skillid']) && isset($_POST['sub-skillname'])) { //insert into sub-skill
+} else if (isset($_POST['sub-skillid']) ) { //insert into sub-skill
     $id = $_POST['sub-skillid'];
-    $skillid = $_POST['skillid'];
     $name = $_POST['sub-skillname'];
     $point = $_POST['point'];
-    $sql = "insert into `skill-detail` (skillname='$name', point ='$point' where skillid=$id ";
+    $sql = "insert into `skill-detail` (skillname, point, skillid) values( '$name',   '$point' ,  $id) ";
     echo $sql;
     mysqli_set_charset($conn, 'UTF8');
     if (mysqli_query($conn, $sql)) {
@@ -130,11 +129,11 @@ if (isset($_POST['knowlegeid'])) { //insert into knowlege
     $id = $_POST['knowlegeid'];
     $name = $_POST['name'];
 
-    $sql = "insert into `knowlege` ( name ='$name' where knowlegeid=$id ";
+    $sql = "insert into `knowlege` ( name, memberid) values ( '$name' , $id )";
     echo $sql;
     mysqli_set_charset($conn, 'UTF8');
     if (mysqli_query($conn, $sql)) {
-        header("Location:edit-resume-skill.php");
+        header("Location:add-resume-skill.php");
     } else {
         $e = mysqli_error($conn);
         echo $e;

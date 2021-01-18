@@ -14,111 +14,72 @@ if (!isset($_SESSION['memberid'])) {
         <div class="row">
             <div class="col-md-12">
 
-                <?php ?>
+                <form action="add-process.php" method="post">
+                    <div class="form-group" hidden>
+                        <label for="">User id</label>
+                        <input type="text" name="skillid" id="" class="form-control" value="<?php echo $_SESSION['memberid'] ?>">
+                    </div>
+                    <div class="form-group">
+                        <label for=""><b>Skill Group Name</b></label>
+                        <input type="text" name="skillname" id="" class="form-control">
+                    </div>
+                    <button type=" submit" class="btn btn-success mx-3">Save</button>
+                </form>
 
                 <?php
                 $sql = 'SELECT * FROM `profile-resume-skill` WHERE memberid=' . $_SESSION['memberid'] . ' ';
                 $result = mysqli_query($conn, $sql);
                 if (mysqli_num_rows($result) > 0) {
                     $row = mysqli_fetch_all($result);
-                }
 
-                foreach ($row as $skill) { ?>
-                    <div class="skill-group">
-                        <form action="add-process.php" method="post">
-                            <div class="form-group" hidden>
-                                <label for="">User id</label>
-                                <input type="text" name="skillid" id="" class="form-control" value="<?php echo $skill[1] ?>">
-                            </div>
-                            <div class="form-group">
-                                <label for=""><b>Skill Group Name</b></label>
-                                <input type="text" name="skillname" id="" class="form-control" ">
-                            </div>
-                            <button type="submit" class="btn btn-success mx-3">Save</button>
-                        </form>
 
-                        <table class="table table-striped table-inverse " id="tableno1">
-                            <thead>
-                                <tr>
+                    foreach ($row as $skill) { ?>
+                        <div class="skill-group" style="padding: 10px;">
+                            <h4>Skill group <?php echo $skill[2]; ?></h4>
+                            <h4>Skill id <?php echo $skill[1]; ?></h4>
 
-                                    <th>Skill Name</th>
-                                    <th>Point</th>
-                                    <th scope="col">Edit</th>
-                                    <th scope="col">Delete</th>
-                                </tr>
-                            </thead>
-                            <tbody id="myTable">
-                                <?php
-                                $sql = 'SELECT * FROM `skill-detail` WHERE skillid=' . $skill[1] . ' ';
-                                $result = mysqli_query($conn, $sql);
-                                if (mysqli_num_rows($result) > 0) {
-                                    $subrow = mysqli_fetch_all($result);
-                                }
-
-                                foreach ($subrow as $sub_skill) {
-                                    echo '<form action="add-process.php" class="form-inline" method="post"> <tr>'; ?>
-                                    <div class="form-group" hidden>
-                                        <label for="">subskill id</label>
-                                        <input type="text" name="sub-skillid" id="" class="form-control" value="<?php echo $sub_skill[1] ?>">
-                                    </div>
-                                    <div class="form-group" hidden>
-                                        <label for="">skill id</label>
-                                        <input type="text" name="skillid" id="" class="form-control" value="<?php echo $skill[1] ?>">
-                                    </div>
-                                    <td>
-
-                                        <div class="form-group">
-                                            <input type="text" name="sub-skillname" id="" class="form-control" >
+                                    
+                                        <form action="add-process.php" class="form-inline" method="post"> 
+                                        
+                                        <div class="form-group" hidden>
+                                            <label for="">skill id</label>
+                                            <input type="text" name="sub-skillid" id="" class="form-control" value="<?php echo $skill[1]; ?>">
                                         </div>
-
-
-                                    </td>
-                                    <td>
                                         <div class="form-group">
-                                            <input type="number" name="point" id="" class="form-control" >
+                                        <label for="">Skill name</label>
+                                            <input type="text" name="sub-skillname" id="" class="form-control">
                                         </div>
-                                    </td>
-                                    <td><button type="submit" class="btn btn-success mx-3">Save</button>
+                                        <div class="form-group">
+                                        <label for="">Skill point</label>
+                                            <input type="number" name="point" id="" class="form-control">
+                                        </div>
+                                        <button type="submit" class="btn btn-success mx-3">Save</button>
+                                        </form>
 
-                                    </td>
 
-                                <?php
-                                    echo '<td scope="row" > <a class="btn btn-danger mx-3" href="delete.php?id=' . $sub_skill[1] . '"> <i class="fas fa-trash-alt"></i> Delete</td>';
-                                    echo '</form> </tr>';
-                                }
-                                ?>
-                            </tbody>
-                        </table>
-                    </div>
 
-                <?php } ?>
+                        </div>
+
+                <?php }
+                } ?>
 
                 <div class="pt-3 skill-group">
                     <h4>Knowlege</h4>
                     <hr>
-                    <?php
-                    $sql = 'SELECT * FROM `knowlege` WHERE memberid=' . $_SESSION['memberid'] . ' ';
-                    $result = mysqli_query($conn, $sql);
-                    if (mysqli_num_rows($result) > 0) {
-                        $row = mysqli_fetch_all($result);
-                    }
-
-                    foreach ($row as $skill) { ?>
-
+                    
                         <form action="add-process.php" method="post">
                             <div class="form-group" hidden>
                                 <label for="">know id</label>
-                                <input type="text" name="knowlegeid" id="" class="form-control" value="<?php echo $skill[1] ?>">
+                                <input type="text" name="knowlegeid" id="" class="form-control" value="<?php echo  $_SESSION['memberid']; ?>">
                             </div>
                             <div class="form-group">
                                 <label for=""><b>Knowlege Name</b></label>
                                 <input type="text" name="name" id="" class="form-control" ">
                             </div>
-                            <button type="submit" class="btn btn-success mx-3">Save</button>
+                            <button type=" submit" class="btn btn-success mx-3">Save</button>
                         </form>
 
 
-                    <?php } ?>
                 </div>
 
 

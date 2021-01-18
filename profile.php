@@ -124,24 +124,12 @@ if (mysqli_num_rows($result) > 0) {
                         <input type="email" class="form-control" name="email" id="" value="<?php echo $post['email'] ?>">
                     </div>
                     <div class="form-group">
-                        <label for="">Address 1</label><br>
+                        <label for="">Address </label><br>
                         <input type="text" class="form-control" name="address1" id="" value="<?php echo $post['address1'] ?>">
-                    </div>
-                    <div class="form-group">
-                        <label for="">Address 2</label><br>
-                        <input type="text" class="form-control" name="address2" id="" value="<?php echo $post['address2'] ?>">
                     </div>
                     <div class="form-group">
                         <label for="">City</label><br>
                         <input type="text" class="form-control" name="city" id="" value="<?php echo $post['city'] ?>">
-                    </div>
-                    <div class="form-group">
-                        <label for="">State country</label><br>
-                        <input type="text" class="form-control" name="state_country" id="" value="<?php echo $post['state_country'] ?>">
-                    </div>
-                    <div class="form-group">
-                        <label for="">Zip code/ post code</label><br>
-                        <input type="text" class="form-control" name="zcode_pcode" id="" value="<?php echo $post['zcode_pcode'] ?>">
                     </div>
 
                 </div>
