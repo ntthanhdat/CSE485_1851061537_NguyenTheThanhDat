@@ -82,7 +82,6 @@
                         <div class="form-group">
                         <label for="">Password</label>
                         <input type="password" name="password" id="" class="form-control" placeholder="" aria-describedby="helpId" required>
-                        <small id="helpId" class="text-muted"><a href="change-password.php">Forgot password?</a></small>
                         </div>
                     </div>
                     <div class="modal-footer">

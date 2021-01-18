@@ -1,6 +1,7 @@
 <?php
 include('config.php');
 $email = trim($_POST['email']);
+$errors="";
 if (empty($email)) {
     $errors = 'You forgot to enter your email address.';
 }
@@ -26,10 +27,16 @@ if (empty(trim($errors))) {
             $message = '<br>Your account is not activated. <br> <a class="btn  btn-outline-success my-2" href="activate.php?userid=' . $user['userid'] . '" role="button">Activate now?</a>';
             header("Location:../error.php?error=$message");
         } else {
-            session_start();
             // Ensure that the user level is an integer. 
-            $_SESSION['confrim-delete'] = 1;
-            header('Location: delete.php?id='.$_SESSION['delete_target'].'');
+            
+            $sql = "delete from users where userid= $_SESSION[delete_target]";
+                if (mysqli_query($conn, $sql)) {
+                    unset($_SESSION['delete_target']);
+                    header("Location:index.php");
+                } else {
+                    $e = mysqli_error($conn);
+                    header("Location:error.php?error=$e");
+                }
         }
     } else {
 
