@@ -74,7 +74,7 @@ if (!isset($_SESSION['memberid'])) {
                             </div>
                             <div class="form-group">
                                 <label for=""><b>Knowlege Name</b></label>
-                                <input type="text" name="name" id="" class="form-control" ">
+                                <input type="text" name="name" id="" class="form-control" >
                             </div>
                             <button type=" submit" class="btn btn-success mx-3">Save</button>
                         </form>
