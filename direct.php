@@ -9,7 +9,7 @@
   </div>
 	<div class="split left">
   <div class="centered">
-    <a href="profile/index.php?memberid=2" class="myLink">
+    <a target="blank" href="profile/index.php?memberid=2" class="myLink">
       <div style="display:inline-block">
         <span class="mySpan"><img src="asset/image/member2.jpg" alt="" width="150px" height="150px"></span>
         <h1 class="myh1">Phạm Ánh Dương »</h1>
@@ -21,7 +21,7 @@
 
 <div class="split right">
   <div class="centered">
-    <a href="profile/index.php?memberid=1" class="myLink">
+    <a target="blank" href="profile/index.php?memberid=1" class="myLink">
       <div style="display:inline-block">
         <span class="mySpan"><img src="asset/image/member1.jpg" alt="" width="150px" height="150px"></span>
         <h1 class="myh1">Nguyễn Thế Thành Đạt »</h1>

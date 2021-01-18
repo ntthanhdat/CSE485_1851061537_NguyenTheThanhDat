@@ -6,10 +6,9 @@ if (!isset($_SESSION['memberid'])) {
 } else {
 
     include('../admin/config.php');
-    include('../header.php');
+    include('header.php');
 ?>
 
-    <body>
         <main class="container pt-3 clearfix" style="min-height: calc(100vh - 245px);">
 
             <div class="row">
@@ -105,8 +104,6 @@ if (!isset($_SESSION['memberid'])) {
 
 
 
-
-    </body>
     <?php include('../footer.php') ?>
 <?php
     mysqli_close($conn);

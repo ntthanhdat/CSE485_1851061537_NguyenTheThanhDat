@@ -42,6 +42,7 @@ if (!isset($_GET['memberid'])) {
     </head>
 
     <body>
+    <?php include('header.php');?>
       <!-- Animated Background -->
       <div class="lm-animated-bg" style="background-image: url(img/main_bg.png);"></div>
       <!-- /Animated Background -->

@@ -18,7 +18,7 @@
                 <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="text-white pr-2">Your CV</span></a>
                 <div class="dropdown-menu" aria-labelledby="dropdownId">
                     <a class="dropdown-item" target="_blank" href="profile/index.php?memberid=<?php echo $_SESSION['memberid']; ?>">View CV</a>
-                    <a class="dropdown-item" target="_blank" href="profile/edit.php">Edit CV</a>
+                    <a class="dropdown-item"  href="profile/edit.php">Edit CV</a>
                 </div>
             </div>
 
